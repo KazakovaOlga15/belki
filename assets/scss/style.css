@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "HelveticaMid";
+  src: url(/assets/fonts/HelveticaNeueCyr-Medium.ttf) format("ttf"), url(/assets/fonts/HelveticaNeueCyr-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: "HelveticaRom";
+  src: url(/assets/fonts/HelveticaNeueCyr-Roman.ttf) format("ttf"), url(/assets/fonts/HelveticaNeueCyr-Roman.woff) format("woff");
+}
+@font-face {
+  font-family: "HelveticaBold";
+  src: url(/assets/fonts/HelveticaNeueCyr-Bold.ttf) format("ttf"), url(/assets/fonts/HelveticaNeueCyr-Bold.woff) format("woff");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+/* ПОДАРКИ начало */
+.section_gifts {
+  position: relative;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: 3%;
+  padding: 1rem;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  font-family: "HelveticaRom", sans-serif;
+  line-height: 1.5;
+  border: #eb9c45 solid 3px;
+  border-radius: 1em;
+}
+@media screen and (max-width: 768px) {
+  .section_gifts {
+    margin: 0 auto;
+    max-width: 70%;
+  }
+}
+.section_gifts button {
+  margin-bottom: 1%;
+  padding: 0.5rem;
+  font-family: "HelveticaMid", sans-serif;
+  color: white;
+  border: none;
+  border-radius: 65px;
+  background: linear-gradient(90deg, rgb(51, 204, 51), rgb(15, 153, 0) 100%);
+  cursor: pointer;
+  max-width: 70%;
+  align-self: center;
+}
+.section_gifts i {
+  margin-right: 5px;
+  color: #eb9c45;
+}
+
+.section_gifts:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #eb9c45;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: 50px;
+  margin-bottom: -20px;
+}
+@media screen and (max-width: 768px) {
+  .section_gifts:after {
+    margin-left: -10px;
+  }
+}
+
+/* ПОДАРКИ конец */
+/* КНОПКА ВВЕРХ */
+.totop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-decoration: none;
+  color: rgba(84, 46, 39, 0.5);
+}
+.totop:hover {
+  color: #542e27;
+}
+.totop i {
+  font-size: 40px;
+}
+
+/* КНОПКА ВВЕРХ */
+/* ФУТЕР начало */
+.footer {
+  margin-top: 3%;
+  padding: 3%;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  font-family: "HelveticaMid", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #542e27;
+  border-top: #542e27 solid 2px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 5%;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.footer a {
+  text-decoration: none;
+  color: #542e27;
+}
+.footer i {
+  margin-right: 10px;
+  font-size: 40px;
+}
+.footer div {
+  margin-bottom: 5%;
+}
+.footer .footer__workhours .footer__workhours-time {
+  margin-left: 50px;
+}
+
+/* ФУТЕР конец *//*# sourceMappingURL=style.css.map */
