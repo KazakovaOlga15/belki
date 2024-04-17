@@ -2,37 +2,49 @@ $primary-color: #542e27;
 $secondary-color: #eb9c45;
 $accent-color: #33cc33;
 $accent-color2: #0f9900;
-$fontmain: 'HelveticaRom', sans-serif;
-$fontmid: 'HelveticaMid', sans-serif;
-$fontbold: 'HelveticaBold', sans-serif;
+$bg-color: #DBF0D9;
+$fontmain: 'Montserrat', sans-serif;
+// $fontmid: 'HelveticaMid', sans-serif;
+// $fontbold: 'HelveticaBold', sans-serif;
+$fontsize: 18px;
 
 @mixin button {
     margin-bottom: 1%;
-    padding: 0.5rem;
-    font-family: $fontmid;
+    padding: 0.7rem;
+    font-family: $fontmain;
+    font-weight: bold;
     color: white;
     border: none;
     border-radius: 65px;
     background: linear-gradient(90.00deg, rgb(51, 204, 51), rgb(15, 153, 0) 100%);
     cursor: pointer;
+
+    &:active {
+        box-shadow: rgb(15, 153, 0, 0.3) 3px 3px 3px 3px;
+    }
 }
 
-@font-face {
-    font-family: 'HelveticaMid';
-    src: url(/assets/fonts/HelveticaNeueCyr-Medium.ttf) format('ttf'),
-            url(/assets/fonts/HelveticaNeueCyr-Medium.woff) format('woff');
-}
+// @font-face {
+//     font-family: 'HelveticaMid';
+//     src: url(/assets/fonts/HelveticaNeueCyr-Medium.ttf) format('ttf'),
+//             url(/assets/fonts/HelveticaNeueCyr-Medium.woff) format('woff');
+// }
+
+// @font-face {
+//     font-family: 'HelveticaRom';
+//     src: url(/assets/fonts/HelveticaNeueCyr-Roman.ttf) format('ttf'),
+//         url(/assets/fonts/HelveticaNeueCyr-Roman.woff) format('woff');
+// }
+
+// @font-face {
+//     font-family: 'HelveticaBold';
+//     src: url(/assets/fonts/HelveticaNeueCyr-Bold.ttf) format('ttf'),
+//         url(/assets/fonts/HelveticaNeueCyr-Bold.woff) format('woff');
+// }
 
 @font-face {
-    font-family: 'HelveticaRom';
-    src: url(/assets/fonts/HelveticaNeueCyr-Roman.ttf) format('ttf'),
-        url(/assets/fonts/HelveticaNeueCyr-Roman.woff) format('woff');
-}
-
-@font-face {
-    font-family: 'HelveticaBold';
-    src: url(/assets/fonts/HelveticaNeueCyr-Bold.ttf) format('ttf'),
-        url(/assets/fonts/HelveticaNeueCyr-Bold.woff) format('woff');
+    font-family: 'Montserrat';
+    src: url(/assets/fonts/Montserrat-VariableFont_wght.ttf);
 }
 
 * {
@@ -46,34 +58,20 @@ html {
 }
 
 .body {
-    margin: 0 auto;
-    max-width: 1440px;
+    font-size: $fontsize;
 }
 
 
 /* ПОДАРКИ начало */
 .section_gifts {
-    position: relative;
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: 3%;
-    padding: 1rem;
-    max-width: 40%;
-    display: flex;
-    flex-direction: column;
+    margin: 2%;
     font-family: $fontmain;
     line-height: 1.5;
-    border: $secondary-color solid 3px;
-    border-radius: 1em;
-
-    @media screen and (max-width: 768px) {
-            margin: 0 auto;
-            max-width: 70%;
-        }
+    text-align: center;
 
     button {
         @include button();
-        max-width: 70%;
+        max-width: 80%;
         align-self: center;
     }
 
@@ -83,23 +81,48 @@ html {
     }
 }
 
-.section_gifts:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border: 20px solid transparent;
-    border-top-color: $secondary-color;
-    border-bottom: 0;
-    border-right: 0;
-    margin-left: 50px;
-    margin-bottom: -20px;
-
-    @media screen and (max-width: 768px) {
-            margin-left: -10px;
+.socials {
+    i {
+        margin-top: 1rem;
+        margin-right: 20px;
+        font-size: 40px;
+        
+        &:hover {
+        transform: scale(1.2);
         }
+    }
+}
+
+.section_gifts__subscribe {
+    position: relative;
+    background-color: transparent;
+}
+
+.section_gifts__subscribe::before {
+    content: " ";
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    width: 35px;
+    height: 31px;
+    background-image: url(/assets/images/circle.png);
+    z-index: -1;
+}
+
+.section_gifts__gift {
+    position: relative;
+    background-color: transparent;
+}
+
+.section_gifts__gift::before {
+    content: " ";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 110px;
+    height: 47px;
+    background-image: url(/assets/images/ellipse.png);
+    z-index: -1;
 }
 /* ПОДАРКИ конец */
 
@@ -109,10 +132,10 @@ html {
     bottom: 10px;
     right: 10px;
     text-decoration: none;
-    color: rgb(84, 46, 39, 0.5);
+    color: rgb(15, 153, 0, 0.5);
 
     &:hover {
-        color: $primary-color;
+        color: $accent-color2;
     }
 
     i {
@@ -126,24 +149,25 @@ html {
 .footer {
     margin-top: 3%;
     padding: 3%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-content: center;
-    font-family: $fontmid;
+    font-family: $fontmain;
+    font-weight: bold;
     font-size: 20px;
-    line-height: 1.5;
-    color: $primary-color;
-    border-top: $primary-color solid 2px;
+    line-height: 40px;
+    color: $accent-color2;
+    background-color: $bg-color;
 
     @media screen and (max-width: 768px) {
-        margin-top: 5%;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
     }
 
     a {
         text-decoration: none;
-        color: $primary-color;
+        color: $accent-color2;
     }
 
     i {
@@ -159,6 +183,12 @@ html {
         .footer__workhours-time {
             margin-left: 50px;
         }
+    }
+}
+
+.footer__contact {
+    @media screen and (max-width: 768px){
+        text-align: center;
     }
 }
 /* ФУТЕР конец */
