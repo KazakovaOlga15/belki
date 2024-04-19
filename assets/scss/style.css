@@ -17,6 +17,92 @@ html {
   font-size: 18px;
 }
 
+/* Главная страница начало*/
+.main {
+  margin: 2%;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  text-align: left;
+  padding: 0px 100px;
+  font-weight: 400;
+
+}
+
+.spicok {
+  color: #0f9900;
+  text-decoration: underline;
+}
+
+.main_text {
+
+
+}
+
+.main_text1{
+  line-height: 2em;
+  margin-bottom: -20px; 
+}
+
+.main_text__text2{
+  line-height: 2em;
+  margin-bottom: -10px; 
+}
+
+.main_text__text3{
+  line-height: 2em;
+  margin-bottom: -10px; 
+}
+
+.main_text__text4{
+  line-height: 2em;
+
+}
+
+/* Главная страница конец*/
+
+/* Главная страница начало*/
+.main {
+  margin: 2%;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  text-align: left;
+  padding: 0px 100px;
+  font-weight: 400;
+
+}
+
+.spicok {
+  color: #0f9900;
+  text-decoration: underline;
+}
+
+.main_text {
+
+
+}
+
+.main_text1{
+  line-height: 2em;
+  margin-bottom: -20px; 
+}
+
+.main_text__text2{
+  line-height: 2em;
+  margin-bottom: -10px; 
+}
+
+.main_text__text3{
+  line-height: 2em;
+  margin-bottom: -10px; 
+}
+
+.main_text__text4{
+  line-height: 2em;
+
+}
+
+/* Главная страница конец*/
+
 /* ПРАЙС начало */
 .section_price {
   margin-bottom: 5%;
